@@ -1,0 +1,20 @@
+.navbar {
+    background-color: aquamarine;
+    width: 100%;
+    margin: 0 0;
+    text-align: center;
+    font-size: medium;
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+}
+
+.selection button {
+    font-size: small;
+    margin: 1rem;
+    font-size: .9rem;
+    text-align: center;
+
+}
