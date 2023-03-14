@@ -1,15 +1,17 @@
-import Navbar from './componenets/Navbar';
-import Titlebar from './componenets/Titlebar';
-import Top_reviews from './componenets/Top_reviews';
-
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./componenets/Navbar";
+import Titlebar from "./componenets/Titlebar";
+import TopReviews from "./componenets/TopReviews";
 
 function App() {
   return (
-    <>
-    <Titlebar />
-    <Navbar />
-    <Top_reviews />
-    </>
+    <div className="app">
+      <Titlebar />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={ <TopReviews />} />
+      </Routes>
+    </div>
   );
 }
 
