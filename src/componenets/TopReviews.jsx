@@ -1,6 +1,6 @@
 function Top_reviews() {
   return (
-    <div>Top_reviews</div>
+    <div></div>
   )
 }
 
