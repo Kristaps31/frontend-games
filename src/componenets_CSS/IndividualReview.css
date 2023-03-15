@@ -1,4 +1,4 @@
-.parent {
+.review {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -62,3 +62,4 @@
         grid-area: 9 / 2 / 12 / 7; 
         background-color: bisque;
     }
+

@@ -1,25 +1,35 @@
 import axios from "axios";
 
 
-const reviewApi = axios.create({
+const Api = axios.create({
     baseURL: "https://backend-project-hosting.onrender.com/api"
 })
 
 export const getReviews = () => {
-    return gamesApi.get('/reviews').then(({ data }) => {
-        console.log(data)
+    return Api.get('/reviews').then(({ data }) => {
         return data.reviews;
     })
 };
 
 export const getReviewsById = (review_id) => {
-    return reviewApi.get(`/reviews/${review_id}`)
+    return Api.get(`/reviews/${review_id}`)
     .then((data) => {
         const review = data.data.review
-        console.log(review)
         return review;
     }).catch((error)=> {
         if(error.response)
-        console.log(error)
+        console.log(error.response.data.msg)
     })
+};
+
+export const getCommentsById = (review_id) => {
+    console.log(review_id)
+    return Api.get(`/reviews/${review_id}/comments`)
+    .then((data) => {
+        const comments = data.data.comments
+    return comments;
+}).catch((error)=> {
+    if(error)
+    console.log(error.response.data.msg)
+})
 }

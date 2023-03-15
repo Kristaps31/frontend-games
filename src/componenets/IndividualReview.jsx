@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import React from 'react'
 import { getReviewsById } from '../API';
 import "../componenets_CSS/IndividualReview.css"
+import Comments from './Comments';
+
 
 function IndividualReview() {
     const {review_id} = useParams();
@@ -14,13 +15,15 @@ function IndividualReview() {
         getReviewsById(review_id).then((game) => {
             setGameReview(game);
             setLoading(false);
+            Comments();
         })
     }, []);
 
     if (loading) return <p className='single'>Hang on, loading... </p>;
 
   return (
-    <div className='parent'>
+  <div>
+  <div className='review'>
 
     <h2 className="title">{gameReview.title}</h2>
     <img className='picture' src={gameReview.review_img_url} />
@@ -30,7 +33,10 @@ function IndividualReview() {
     <p className='likes'>Likes: {gameReview.votes}</p>
     <p className='date'>Created At: {gameReview.created_at}</p>
     <p className='text'>{gameReview.review_body}</p>
-    </div>
+  </div>
+  <Comments />
+  </div>
+
   )
 }
 
