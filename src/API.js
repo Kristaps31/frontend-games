@@ -1,8 +1,16 @@
 import axios from "axios";
 
+
 const reviewApi = axios.create({
     baseURL: "https://backend-project-hosting.onrender.com/api"
 })
+
+export const getReviews = () => {
+    return gamesApi.get('/reviews').then(({ data }) => {
+        console.log(data)
+        return data.reviews;
+    })
+};
 
 export const getReviewsById = (review_id) => {
     return reviewApi.get(`/reviews/${review_id}`)

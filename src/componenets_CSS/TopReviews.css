@@ -1,0 +1,43 @@
+.review-card {
+   list-style: none;
+   padding-left: 2em;
+   padding-right: 2em;
+   size: 80%;
+  }
+
+  .review-card li{
+    display: flex;
+    border: solid 2px red;
+    border-radius: 2em;
+    padding: 1em 1em 1em 2em;
+    margin-bottom: 1em;
+  }
+
+
+  .review-title {
+    position: relative; 
+    top: .1rem;
+  }
+ 
+  .review-category{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+      
+.review-votes {
+    margin-top: auto;
+    }
+  
+  .review-img {
+  border-radius: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 20em;
+  height: 20em;
+  background-color: aqua;
+  padding: .5em;
+  margin-right: .5em;
+  }
+  
