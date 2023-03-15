@@ -22,14 +22,14 @@ function IndividualReview() {
   return (
     <div className='parent'>
 
-    <h2 className="div1">{gameReview.title}</h2>
-    <img className='div2' src={gameReview.review_img_url} />
-    <p className='div3'>Game By: {gameReview.designer}</p>
-    <p className='div4'>Game Category: {gameReview.category}</p>
-    <p className='div5'>Review By: {gameReview.owner}</p>
-    <p className='div6'>Likes: {gameReview.votes}</p>
-    <p className='div7'>Created At: {gameReview.created_at}</p>
-    <p className='div8'>{gameReview.review_body}</p>
+    <h2 className="title">{gameReview.title}</h2>
+    <img className='picture' src={gameReview.review_img_url} />
+    <p className='designer'>Game By: {gameReview.designer}</p>
+    <p className='category'>Game Category: {gameReview.category}</p>
+    <p className='reviewAuthor'>Review By: {gameReview.owner}</p>
+    <p className='likes'>Likes: {gameReview.votes}</p>
+    <p className='date'>Created At: {gameReview.created_at}</p>
+    <p className='text'>{gameReview.review_body}</p>
     </div>
   )
 }
