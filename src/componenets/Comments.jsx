@@ -6,7 +6,7 @@ import CommentCard from "./CommentCard";
 
 function Comments() {
     const {review_id} = useParams();
-    const [reviewComment, setReviewComment] = useState({});
+    const [reviewComment, setReviewComment] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -15,10 +15,9 @@ function Comments() {
             setReviewComment(comments)
             setLoading(false)
         })
-    },[]);
+    },[review_id]);
 
     if (loading) return <p className='single'>Hang on, loading... </p>;
-    console.log(reviewComment)
     if (reviewComment === undefined) {
       return (<h3 className="commentTitle">No Comments for This post</h3>)
     }
@@ -29,7 +28,7 @@ function Comments() {
     {loading ? ( <p> Loading Comments...</p>) : (
         <ul> 
         {reviewComment.map((comments) => { 
-            return <CommentCard key={comments.review_id} comment={comments}  />;
+            return <CommentCard key={comments.comment_id} comment={comments}  />;
     })}
     </ul>
     )}

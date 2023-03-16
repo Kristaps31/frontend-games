@@ -23,7 +23,6 @@ export const getReviewsById = (review_id) => {
 };
 
 export const getCommentsById = (review_id) => {
-    console.log(review_id)
     return Api.get(`/reviews/${review_id}/comments`)
     .then((data) => {
         const comments = data.data.comments
@@ -32,4 +31,21 @@ export const getCommentsById = (review_id) => {
     if(error)
     console.log(error.response.data.msg)
 })
+};
+
+export const upVoteReview = (review_id) => {
+    return Api.patch(`/reviews/${review_id}`, {
+        inc_votes: 1
+    }).then(({data}) => {
+        console.log(data.review.votes);
+        return(data)
+    })
+}
+export const downVoteReview = (review_id) => {
+    return Api.patch(`/reviews/${review_id}`, {
+        inc_votes: -1
+    }).then(({data}) => {
+        console.log(data.review.votes);
+        return(data)
+    })
 }
