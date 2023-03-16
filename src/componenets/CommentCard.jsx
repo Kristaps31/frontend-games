@@ -1,7 +1,6 @@
 import "../componenets_CSS/CommentsCard.css"
 
 const CommentCard = (comment) => {
-    console.log(comment.comment)
   return (
     <section className="commentsCard">
    <p className="div1">Comment by: {comment.comment.author}</p>

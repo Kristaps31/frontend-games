@@ -15,7 +15,6 @@ function IndividualReview() {
         getReviewsById(review_id).then((game) => {
             setGameReview(game);
             setLoading(false);
-            Comments();
         })
     }, []);
 

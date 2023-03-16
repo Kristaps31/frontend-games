@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={ <TopReviews />} />
         <Route path="/reviews/:review_id" element={<IndividualReview /> } />
-        <Route path="/reviews/:review_id" element={ <Comments />} />
         </Routes>
     </div>
   );

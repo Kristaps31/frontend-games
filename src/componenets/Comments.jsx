@@ -18,6 +18,10 @@ function Comments() {
     },[]);
 
     if (loading) return <p className='single'>Hang on, loading... </p>;
+    console.log(reviewComment)
+    if (reviewComment === undefined) {
+      return (<h3 className="commentTitle">No Comments for This post</h3>)
+    }
 
   return (
     <div>
