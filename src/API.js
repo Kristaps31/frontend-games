@@ -33,3 +33,17 @@ export const getCommentsById = (review_id) => {
     console.log(error.response.data.msg)
 })
 }
+
+export const postCommentByReviewId = (body, votes, author, review_id, created_at) => {
+    console.log(body, votes, author, review_id, created_at)
+    return Api.post (`/reviews/$(review_id)/comments`, {body, votes, author, review_id, created_at})
+    .then((data) => {
+        console.log(data);
+        return data
+    }).catch((error)=> {
+        if(error)
+        console.log(error.response.data.msg)
+    })
+}
+
+
