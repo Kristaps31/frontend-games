@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { getReviewsById } from '../API';
 import "../componenets_CSS/IndividualReview.css"
 import Comments from './Comments';
+import CommentBox from './CommentBox';
 
 
 function IndividualReview() {
@@ -33,6 +34,7 @@ function IndividualReview() {
     <p className='date'>Created At: {gameReview.created_at}</p>
     <p className='text'>{gameReview.review_body}</p>
   </div>
+  <CommentBox />
   <Comments />
   </div>
 
