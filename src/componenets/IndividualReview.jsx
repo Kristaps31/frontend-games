@@ -16,7 +16,7 @@ function IndividualReview() {
             setGameReview(game);
             setLoading(false);
         })
-    }, []);
+    }, [review_id]);
 
     if (loading) return <p className='single'>Hang on, loading... </p>;
 
@@ -25,7 +25,7 @@ function IndividualReview() {
   <div className='review'>
 
     <h2 className="title">{gameReview.title}</h2>
-    <img className='picture' src={gameReview.review_img_url} />
+    <img className='picture' src={gameReview.review_img_url} alt={"review"} />
     <p className='designer'>Game By: {gameReview.designer}</p>
     <p className='category'>Game Category: {gameReview.category}</p>
     <p className='reviewAuthor'>Review By: {gameReview.owner}</p>

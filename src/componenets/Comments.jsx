@@ -15,7 +15,7 @@ function Comments() {
             setReviewComment(comments)
             setLoading(false)
         })
-    },[]);
+    },[review_id]);
 
     if (loading) return <p className='single'>Hang on, loading... </p>;
     console.log(reviewComment)

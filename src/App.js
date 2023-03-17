@@ -4,7 +4,6 @@ import Titlebar from "./componenets/Titlebar";
 import TopReviews from "./componenets/TopReviews";
 import IndividualReview from "./componenets/IndividualReview";
 import { Routes, Route } from "react-router";
-import Comments from "./componenets/Comments";
 
 function App() {
   return (
